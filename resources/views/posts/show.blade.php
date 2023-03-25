@@ -14,7 +14,8 @@
             <!--なんで分けてる？-->
             <div class="content__post">
                 <h3>本文</h3>
-                <p>{{ $post->body }}</p>    
+                  <!--シーダーで入れた改行を反映させるための記述-->
+                <p>{!! nl2br(e($post->body)) !!}</p>    
             </div>
         </div>
         <div class="edit">
