@@ -8,6 +8,7 @@
     </head>
     <body>
         <h1>Blog Name</h1>
+         <a href='/posts/create'>create</a>
         <div class='posts'>
             <!--コントローラーで渡した'posts'を$postsとして使用-->
             @foreach($posts as $post)
@@ -19,6 +20,9 @@
             </div>
             @endforeach
         </div>
+        <!--ブログ投稿作成画面へ-->
+        
+        
         <div class='paginate'>
             {{ $posts->links() }}
         </div>

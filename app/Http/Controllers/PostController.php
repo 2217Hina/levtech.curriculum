@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\PostRequest;
 use App\Models\Post;
 
 class PostController extends Controller
@@ -17,4 +18,21 @@ class PostController extends Controller
     {
         return view('posts/show')->with(['post'=>$post]);
     }
+    
+     public function create()
+     {
+         return view('posts/create');
+     }
+     
+     public function store(PostRequest $request,Post $post)
+     {
+        //  'post'をキーに持つリクエストパラメータを取得
+        $input = $request['post'] ;
+        // 保存処理
+        $post->fill($input)->save();
+        return redirect('/posts/'.$post->id);
+        
+     }
+     
+     
 }
