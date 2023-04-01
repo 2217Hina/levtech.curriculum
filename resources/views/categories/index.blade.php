@@ -9,7 +9,9 @@
     <body>
         <h1>Category</h1>
         @foreach($posts as $post)
-        <h2>{{ $post->title }}</h2>
+        <h2 class='title'>
+            <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
+        </h2>
         @endforeach
     </body>
 </html>
