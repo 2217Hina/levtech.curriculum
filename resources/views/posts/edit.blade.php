@@ -18,7 +18,7 @@
             </div>
             <div class='content__body'>
                 <h2>本文</h2>
-                <input type='text' name='post[body]' value="{{ $post->body }}">
+                <textarea name="post[body]" >{{ $post->body }}</textarea>
             </div>
             <input type="submit" value="保存">
         </form>

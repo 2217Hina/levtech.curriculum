@@ -16,8 +16,9 @@
                 <h2 class='title'>
                     <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
                 </h2>
+                    <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
                 <!--シーダーで入れた改行を反映させるための記述-->
-                <p class='body'>{!! nl2br(e($post->body)) !!}</p>
+                    <p class='body'>{!! nl2br(e($post->body)) !!}</p>
                 <form action="/posts/{{ $post->id }}" id="form_{{ $post->id }}" method="post">
                     @csrf
                     @method('DELETE')

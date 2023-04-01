@@ -10,6 +10,7 @@
         <h1 class="title">
             {{ $post->title }}
         </h1>
+        <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
         <div class="content">
             <!--なんで分けてる？-->
             <div class="content__post">
