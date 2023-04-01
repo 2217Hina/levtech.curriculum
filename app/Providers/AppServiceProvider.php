@@ -27,5 +27,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //tailwind->設定を怠ると変な表示になるから
         Paginator::useBootstrap();
+        \URL::forceScheme('https');
+        $this->app['request']->server->set('HTTPS','on');
     }
 }

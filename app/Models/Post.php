@@ -16,7 +16,7 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
     
-   public function getPaginateByLimit(int $limit_count = 1)
+   public function getPaginateByLimit(int $limit_count = 10)
     {
         // $this->インスタンス自身
         // updated_atで降順に並べたあと、limitで件数制限をかける
